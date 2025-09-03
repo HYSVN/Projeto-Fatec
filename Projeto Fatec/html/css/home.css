@@ -1,0 +1,171 @@
+body {
+    display: flex;  
+    background-color: #000000;
+    color: #e91e63;
+    font-family: Arial, sans-serif;
+    margin-top: 260px;
+    padding: 40px; 
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.logo {
+    font-size: 3em;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: auto;
+    border-radius: 80px;
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.icon {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.icon p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* From Uiverse.io by 0800Gonza */ 
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 1s;
+  justify-items: center;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+
+
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128c7e;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card {
+    display: grid; /* Usando grid para organizar os ícones */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 20px; /* Espaçamento entre os ícones */
+    justify-items: center; /* Centraliza os ícones em cada coluna */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 20px; /* Espaço acima da grade */
+    
+}
+
+.socialContainer {
+    text-align: center; /* Centraliza o texto abaixo dos ícones */
+}
+
+.socialSvg {
+    width: 50px; /* Largura dos ícones */
+    height: 30px; /* Altura dos ícones */
+}
+
+.subtitle {
+    text-align: center; /* Centraliza o subtítulo */
+}
+
+/* Localização */
+.containerLocation:hover {
+  background-color: #007bff; /* Cor para hover */
+}
+
+/* Agendamento */
+.containerScheduling:hover {
+  background-color: #b31926; /* Cor para hover */
+}
