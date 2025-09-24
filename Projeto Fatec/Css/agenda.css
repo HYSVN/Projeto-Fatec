@@ -1,0 +1,339 @@
+        :root {
+            --rosa-principal: #e83e8c;
+            --rosa-claro: #f8d7da;
+            --rosa-escuro: #c2185b;
+            --dourado: #d4af37;
+            --branco: #ffffff;
+            --cinza-claro: #f9f9f9;
+            --cinza-escuro: #444444;
+            --sombra: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--cinza-claro);
+            color: var(--cinza-escuro);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-escuro));
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: var(--sombra);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .logo i {
+            color: var(--dourado);
+            margin-right: 10px;
+        }
+
+        .slogan {
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Seção de introdução */
+        .intro {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--branco);
+        }
+
+        .intro h2 {
+            color: var(--rosa-principal);
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Formulário de agendamento */
+        .agendamento-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .servicos, .calendario, .resumo {
+            flex: 1;
+            min-width: 300px;
+            background: var(--branco);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: var(--sombra);
+        }
+
+        .servicos h3, .calendario h3, .resumo h3 {
+            color: var(--rosa-principal);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--rosa-claro);
+        }
+
+        .servico-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            background: var(--cinza-claro);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .servico-item:hover {
+            background: var(--rosa-claro);
+            transform: translateY(-3px);
+        }
+
+        .servico-item.selecionado {
+            background: var(--rosa-claro);
+            border-left: 4px solid var(--rosa-principal);
+        }
+
+        .servico-preco {
+            color: var(--rosa-principal);
+            font-weight: bold;
+        }
+
+        /* Calendário */
+        .calendario-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .calendario-mes {
+            font-weight: bold;
+            color: var(--rosa-principal);
+        }
+
+        .calendario-nav button {
+            background: var(--rosa-principal);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .calendario-nav button:hover {
+            background: var(--rosa-escuro);
+        }
+
+        .calendario-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            align-items: center;
+            
+        }
+
+        .calendario-dia {
+            text-align: center;
+            padding: 10px 7px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .calendario-dia:hover {
+            background: var(--rosa-claro);
+        }
+
+        .calendario-dia.selecionado {
+            background: var(--rosa-principal);
+            color: white;
+        }
+
+        .calendario-dia.indisponivel {
+            color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .calendario-dia.hoje {
+            border: 2px solid var(--dourado);
+            
+        }
+
+        .horarios {
+            margin-top: 20px;
+        }
+
+        .horarios-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .horario-btn {
+            padding: 8px 5px;
+            background: var(--cinza-claro);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .horario-btn:hover {
+            background: var(--rosa-claro);
+        }
+
+        .horario-btn.selecionado {
+            background: var(--rosa-principal);
+            color: white;
+        }
+
+        .horario-btn.indisponivel {
+            background: #f8d7da;
+            color: #888;
+            cursor: not-allowed;
+        }
+
+        /* Resumo */
+        .resumo-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--rosa-claro);
+        }
+
+        .resumo-total {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--rosa-principal);
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px solid var(--rosa-claro);
+        }
+
+        .btn-agendar {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: var(--rosa-principal);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-agendar:hover {
+            background: var(--rosa-escuro);
+            transform: translateY(-3px);
+        }
+
+        .form-contato {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--cinza-escuro);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            color: var(--dourado);
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .agendamento-container {
+                flex-direction: column;
+            }
+            
+            .horarios-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .horarios-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .calendario-grid {
+                gap: 2px;
+            }
+            
+            .calendario-dia {
+                padding: 5px;
+                font-size: 0.9rem;
+            }
+        }
+   
