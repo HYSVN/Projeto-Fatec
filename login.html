@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Manicure</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela de Login -->
+        <div class="form-container" id="loginContainer">
+            <h1>Bem-vinda ao Espaço Manicure</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginName">Seu Nome</label>
+                    <input type="text" id="loginName" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPhone">Celular</label>
+                    <input type="tel" id="loginPhone" placeholder="(xx) xxxxx-xxxx" required>
+                </div>
+                <button id="entrar" type="submit">Entrar</button>
+            </form>
+            <div class="switch-form">
+                <p>Não tem cadastro? <a href="#" id="showRegister">Cadastre-se aqui</a></p>
+            </div>
+        </div>
+        
+        <!-- Tela de Cadastro -->
+        <div class="form-container hidden" id="registerContainer">
+            <h1>Criar Conta</h1>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Nome Completo</label>
+                    <input type="text" id="registerName" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPhone">Celular</label>
+                    <input type="tel" id="registerPhone" placeholder="(xx) xxxxx-xxxx" required>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <div class="switch-form">
+                <p>Já tem uma conta? <a href="#" id="showLogin">Faça login aqui</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
